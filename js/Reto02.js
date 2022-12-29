@@ -35,4 +35,4 @@ function fibonacciSequence(position) {
     }
 }
 
-fibonacciSequence(500);
+fibonacciSequence(50);
