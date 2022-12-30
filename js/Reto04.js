@@ -25,7 +25,7 @@ class Polygon {
     
     calculateArea() {
 
-        let msg = "El área es: "
+        let msg = "El área es:"
 
         switch (this.edges.length) {
             case 1:
@@ -43,16 +43,18 @@ class Polygon {
                 this.area = Math.pow((semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC)), (0.5));
                 break;
             default:
-                msg = "No se puede determinar el área: ";
+                msg = "No se puede determinar el área:";
                 break;
         }
 
-        return console.log(msg, this.area);
+        return console.log(msg, this.area, "und^2");
     }
 
     printEdges() {
+        let sideCount = 0
         for (const edge of this.edges) {
-            console.log(edge);
+            sideCount += 1
+            console.log(`Lado ${sideCount} = ${edge} und`);
         }
     }
 }
