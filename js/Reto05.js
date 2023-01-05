@@ -30,9 +30,7 @@ const getGCD = (a, b) => {
    return a;
 };
 
-let gcd =  getGCD(1920, 1080);
-console.log(1920/gcd, 1080/gcd);
-
+// Se obtiene el aspect ratio
 function getAspectRatio(imageUrl) {
     const img = new Image();
     img.src = imageUrl.toString();
@@ -42,10 +40,7 @@ function getAspectRatio(imageUrl) {
     sizeArray.push(img.width / gcd);
     sizeArray.push(img.height / gcd);
 
-    debugger
-    console.log(Math.max(sizeArray));
-
-    return console.log(`El aspect ratio es: ${Math.max(sizeArray)}:${Math.min(sizeArray)}`);
+    return console.log(`El aspect ratio es: ${Math.max(...sizeArray)}:${Math.min(...sizeArray)}`);
     
  }
 
